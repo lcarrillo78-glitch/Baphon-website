@@ -203,8 +203,8 @@
       .hamburger { display: block; }
       nav { flex-wrap: wrap; }
     }
-    .sponsor-tier-grid { display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)) minmax(280px, 1.15fr); gap: 1.25rem; margin-bottom: 3rem; align-items: stretch; }
-    .exhibitor-form-col { grid-column: 4; grid-row: 1; display: flex; flex-direction: column; }
+    .sponsor-tier-grid { display: grid; grid-template-columns: repeat(3, minmax(200px, 1fr)); gap: 1.25rem; margin-bottom: 3rem; align-items: stretch; }
+    .exhibitor-form-col { grid-column: 1 / -1; grid-row: auto; display: flex; flex-direction: column; margin-top: 1.5rem; }
     @media (max-width: 1000px) {
       .sponsor-tier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .sponsor-tier-grid .exhibitor-form-col { grid-column: 1 / -1; grid-row: auto; }
@@ -1011,79 +1011,15 @@
           </ul>
         </div>
 
-        <!-- Interest Form (4th column) -->
+        <!-- Sponsor Pledge Form (embedded Google Form, full width below tiers) -->
         <div class="exhibitor-form-col">
-          <p class="sub-heading" style="margin-bottom:0.5rem;">2027 Exhibitor Interest Form</p>
-          <p style="font-size:0.78rem; color:var(--gray); margin-bottom:1rem; line-height:1.6;">
-            Complete this form to express your interest in supporting BAPHON's 11th Annual Conference (April 30–May 1, 2027, Flamingo Resort & Spa, Santa Rosa, CA). Our sponsor liaison will follow up with full exhibitor package details and payment information.
+          <p class="sub-heading" style="margin-bottom:0.5rem;">2027 Sponsor Pledge Form</p>
+          <p style="font-size:0.85rem; color:var(--gray); margin-bottom:1rem; line-height:1.6; max-width:720px;">
+            Complete this form to pledge your support for BAPHON's 11th Annual Conference (April 30–May 1, 2027, Flamingo Resort &amp; Spa, Santa Rosa, CA). Our sponsor liaison will follow up with full package details and payment information.
           </p>
-
           <div class="exhibitor-form-box">
-            <div id="sponsor-form">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
-            <div>
-              <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Company / Organization Name *</label>
-              <input id="sf-company" type="text" placeholder="As you'd like it displayed" style="width:100%; border:1px solid var(--border); border-radius:6px; padding:0.6rem 0.75rem; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-            </div>
-            <div>
-              <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Primary Contact Name *</label>
-              <input id="sf-contact" type="text" placeholder="Full name" style="width:100%; border:1px solid var(--border); border-radius:6px; padding:0.6rem 0.75rem; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-            </div>
-          </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
-            <div>
-              <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Email Address *</label>
-              <input id="sf-email" type="email" placeholder="contact@company.com" style="width:100%; border:1px solid var(--border); border-radius:6px; padding:0.6rem 0.75rem; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-            </div>
-            <div>
-              <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Phone Number</label>
-              <input id="sf-phone" type="tel" placeholder="(555) 555-5555" style="width:100%; border:1px solid var(--border); border-radius:6px; padding:0.6rem 0.75rem; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'">
-            </div>
-          </div>
-          <div style="margin-bottom:1rem;">
-            <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Sponsorship Level of Interest *</label>
-            <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;">
-                <input type="radio" name="sf-level" value="Platinum ($5,500)"> <span>🥇 Platinum — $5,500</span>
-              </label>
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;">
-                <input type="radio" name="sf-level" value="Gold ($4,500)"> <span>🥈 Gold — $4,500</span>
-              </label>
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;">
-                <input type="radio" name="sf-level" value="Silver ($3,500)"> <span>🥉 Silver — $3,500</span>
-              </label>
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;">
-                <input type="radio" name="sf-level" value="Not sure yet"> <span>Not sure yet</span>
-              </label>
-            </div>
-          </div>
-          <div style="margin-bottom:1rem;">
-            <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Is your organization a returning BAPHON sponsor?</label>
-            <div style="display:flex; gap:0.5rem;">
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;"><input type="radio" name="sf-returning" value="Yes"> Yes</label>
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;"><input type="radio" name="sf-returning" value="No"> No — first time</label>
-            </div>
-          </div>
-          <div style="margin-bottom:1rem;">
-            <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Is your organization non-profit?</label>
-            <div style="display:flex; gap:0.5rem;">
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;"><input type="radio" name="sf-nonprofit" value="Yes"> Yes</label>
-              <label style="display:flex; align-items:center; gap:0.4rem; background:var(--gray-light); border:1px solid var(--border); border-radius:6px; padding:0.5rem 0.9rem; font-size:0.82rem; cursor:pointer;"><input type="radio" name="sf-nonprofit" value="No"> No</label>
-            </div>
-          </div>
-          <div style="margin-bottom:1.5rem;">
-            <label style="display:block; font-size:0.75rem; font-weight:600; color:var(--navy); margin-bottom:0.35rem;">Additional Comments or Questions</label>
-            <textarea id="sf-comments" rows="3" placeholder="Anything you'd like us to know..." style="width:100%; border:1px solid var(--border); border-radius:6px; padding:0.6rem 0.75rem; font-size:0.85rem; font-family:'Inter',sans-serif; resize:vertical; outline:none;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-          </div>
-          <div id="sf-error" style="display:none; background:#fef2f2; border:1px solid #fca5a5; border-radius:6px; padding:0.75rem 1rem; font-size:0.82rem; color:#dc2626; margin-bottom:1rem;"></div>
-          <button id="sf-submit-btn" onclick="submitSponsorForm()" style="background:var(--teal); color:white; border:none; border-radius:6px; padding:0.85rem 2.5rem; font-size:0.88rem; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif; transition:background 0.2s;" onmouseover="this.style.background='var(--teal-light)'" onmouseout="this.style.background='var(--teal)'">Submit Interest →</button>
-            </div>
-
-            <div id="sf-success" style="display:none; text-align:center; padding:2rem;">
-              <div style="font-size:2.5rem; margin-bottom:1rem;">🎉</div>
-              <h3 style="font-family:'Lora',serif; color:var(--navy); margin-bottom:0.5rem;">Thank You for Your Interest!</h3>
-              <p style="font-size:0.88rem; color:var(--gray);">Our sponsor liaison will be in touch with full exhibitor package details and next steps. We look forward to partnering with you at BAPHON's 11th Annual Conference!</p>
-            </div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUvn9mSIXOmubXCcpmiuEX4zAiQ4O3l6ulx4aYY9NecBXTRw/viewform?embedded=true" title="2027 BAPHON Conference Sponsor Pledge Form" width="100%" height="2178" frameborder="0" marginheight="0" marginwidth="0" style="display:block; width:100%; max-width:760px; margin:0 auto; border:0;">Loading…</iframe>
+            <p style="font-size:0.78rem; color:var(--gray); text-align:center; margin-top:1rem;">Trouble viewing the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUvn9mSIXOmubXCcpmiuEX4zAiQ4O3l6ulx4aYY9NecBXTRw/viewform" target="_blank" rel="noopener" style="color:var(--teal); font-weight:600;">Open it in a new tab →</a></p>
           </div>
         </div>
       </div>
